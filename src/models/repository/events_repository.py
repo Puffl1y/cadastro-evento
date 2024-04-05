@@ -17,7 +17,9 @@ class EventsRepository:
                 )
                 database.session.add(event)
                 database.session.commit()
+
                 return eventsInfo
+                
             except IntegrityError:
                 raise Exception('Evento já cadastrado')
 
