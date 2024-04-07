@@ -62,3 +62,4 @@ class AttendeesHandler:
             body = {"attendees": formatted_attendees},
             status_code = 200
         )
+        

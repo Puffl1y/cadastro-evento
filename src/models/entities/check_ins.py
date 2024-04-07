@@ -1,5 +1,5 @@
 from src.models.settings.base import Base
-from sqlalchemy import Column, String, Integer, DateTime, ForeigKey
+from sqlalchemy import Column, String, Integer, DateTime, ForeignKey
 from sqlalchemy.sql import func
 
 class CheckIns(Base):
@@ -7,7 +7,7 @@ class CheckIns(Base):
 
     id = Column(Integer, primary_key=True)
     creat_at = Column(DateTime, default = func.now())
-    attendeeId = Column(String, ForeigKey("attendees.id"))
+    attendeeId = Column(String, ForeignKey("attendees.id"))
 
 
     def __repr__(self):
